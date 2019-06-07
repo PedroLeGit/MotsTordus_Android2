@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".vue.erreurinternet">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:src="@drawable/error" />
+
+        <TextView
+            android:id="@+id/lbl_titreerreur"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:autoText="false"
+            android:baselineAligned="false"
+            android:text="ERREUR FATALE"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbl_titreerreur2"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:baselineAligned="false"
+            android:text="PAS DE CONNEXION INTERNET "
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/lbl_descrerreur"
+            android:layout_width="match_parent"
+            android:layout_height="287dp"
+            android:baselineAligned="false"
+            android:text="Cette erreur est dû à l'abscence de connexion à internet. \n Pour pouvoir participer aux concours de la médiathèque il est obligatoire d'avoir une connexion au réseau pour pouvoir valider sa participation ou encore consulter les informations relatives au profil utilisateur. \n \n \n Pour résoudre ce problème veuilliez verifier votre connexion et redemarrer l'application."
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_restart"
+                android:layout_width="168dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_bouton"
+                android:text="REDEMARRER"
+                android:textColor="@color/Style_blanc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="168dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_bouton"
+                android:text="FERMER"
+                android:textColor="@color/Style_blanc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

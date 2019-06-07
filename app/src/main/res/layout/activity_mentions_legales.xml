@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".vue.mentions_legales">
+
+    <TextView
+        android:id="@+id/lbl_titre"
+        android:layout_width="238dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="MENTIONS LEGALES"
+        android:textColor="@color/Style_blanc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ml_btn_retour"
+        android:layout_width="82dp"
+        android:layout_height="59dp"
+        android:background="@drawable/style_bouton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fleche_retour" />
+
+    <TextView
+        android:id="@+id/lbl_mentions"
+        android:layout_width="376dp"
+        android:layout_height="602dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
+        android:text="Présentation générale de l'application \n Les services proposés sur l'application mobile de la Quizzothèque sont destinés à être offerts et utilisés selon les conditions contractuelles et sont réservés aux utilisateurs de la mediatheque, domiciliés en France métropolitaine. \n Le questionnaire donné proposé sur la présente application est fourni à titre ludique et n'a pas de valeur contractuelle. \n Les concours ont pour unique but de promouvoir des oeuvres, et n’inscrivent, en aucun cas, l’utilisateur à des offres externes ou des promotions à valeur marchande. \n Tous les droits de reproduction sont réservés, pour tous les éléments de l'application qu'ils soient textes ou images. La reproduction de tout ou partie de l'application mobile sur un support quel qu'il soit est formellement interdite sauf autorisation expresse des proprietaires. La présente application a fait l'objet d'une déclaration à la CNIL et est soumis à la loi française. \n \n Editeur \n SSII LesFousDeProg \n Siège social : 58 rue Georges Delperier, 37000 TOURS \n Développeurs de l’application : RICHARD Antonin et PLAUD Pierre-Amaury \n \n Hébergement \n L'hébergement de l'application mobile Quizzotheque et le stockage des informations sont à et sur : \n Médiatheque Les MotsTordus \n Serveur ISCB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_titre"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
