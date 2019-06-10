@@ -1,5 +1,6 @@
 package com.iscb.slamsio2.app_antonin_android.vue;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView img_avatar;
     private TextView lbl_pseudo;
     private class_utilisateur utilisateur;
+
 
 
 
@@ -120,7 +122,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         if (b.getText().equals(btn_participer.getText())){
-
+            Intent PageQuestions = new Intent(this, questions.class);
+            this.startActivity(PageQuestions);
         }
         if (b.getText().equals(btn_concoursvenir.getText())){
 

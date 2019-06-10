@@ -11,15 +11,17 @@ public class class_questions implements Parcelable {
     private String choix2_question;
     private String choix3_question;
     private String solution_question;
+    private String categorie_question;
 
     //  Construction
-    public class_questions(int unId, String unLibelle, String choix1, String choix2, String choix3,String bonne_rep){
+    public class_questions(int unId, String unLibelle, String choix1, String choix2, String choix3,String bonne_rep, String categorie){
         id_question = unId;
         libelle_question = unLibelle;
         choix1_question = choix1;
         choix2_question = choix2;
         choix3_question = choix3;
         solution_question = bonne_rep;
+        categorie_question =  categorie;
     }
     //  Accesseurs
     //      Getter
@@ -31,6 +33,7 @@ public class class_questions implements Parcelable {
         choix2_question = in.readString();
         choix3_question = in.readString();
         solution_question = in.readString();
+        categorie_question = in.readString();
     }
 
     public static final Creator<class_questions> CREATOR = new Creator<class_questions>() {
@@ -69,6 +72,9 @@ public class class_questions implements Parcelable {
         return solution_question;
     }
 
+    public String getCategorie_question() {
+        return categorie_question;
+    }
     //      Setter
 
     public void setLibelle_question(String libelle_question) {
@@ -91,6 +97,10 @@ public class class_questions implements Parcelable {
         this.solution_question = solution_question;
     }
 
+    public void setCategorie_question(String categorie_question) {
+        this.categorie_question = categorie_question;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -104,5 +114,6 @@ public class class_questions implements Parcelable {
         dest.writeString(choix2_question);
         dest.writeString(choix3_question);
         dest.writeString(solution_question);
+        dest.writeString(categorie_question);
     }
 }

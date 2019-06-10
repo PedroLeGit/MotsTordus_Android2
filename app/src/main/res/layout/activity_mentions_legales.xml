@@ -8,7 +8,7 @@
     tools:context=".vue.mentions_legales">
 
     <TextView
-        android:id="@+id/lbl_titre"
+        android:id="@+id/lbl_question_titre"
         android:layout_width="238dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_titre"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_question_titre"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
