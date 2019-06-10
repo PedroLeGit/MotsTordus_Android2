@@ -45,8 +45,9 @@ public class crud_question implements AsyncResponse {
                         String choix3 = data.getString("choix3_questions");
                         String solution = data.getString("solution_questions");
                         String categorie = data.getString("libellecategorie_questions");
+                        String indice = data.getString("indice_question");
 
-                        class_questions q = new class_questions(id_questions, libelle_questions, choix1, choix2, choix3, solution, categorie);
+                        class_questions q = new class_questions(id_questions, libelle_questions, choix1, choix2, choix3, solution, categorie, indice);
                         question_en_cours = q;
 
                     } catch (JSONException e) {
@@ -74,6 +75,14 @@ public class crud_question implements AsyncResponse {
         accesDonnes.delegate = this;
         accesDonnes.addParam("operation", "getQuestionByIdConcoursAndNbQuestion");
         accesDonnes.addParam("id_concours", id_concours);
+        accesDonnes.addParam("nb_question", nb_question);
+        accesDonnes.execute(SERVERADDR);
+    }
+
+    public void demande_indice(String nb_question){
+        AccesHTTP accesDonnes = new AccesHTTP();
+        accesDonnes.delegate = this;
+        accesDonnes.addParam("operation", "getQuestionByIdConcoursAndNbQuestion");
         accesDonnes.addParam("nb_question", nb_question);
         accesDonnes.execute(SERVERADDR);
     }

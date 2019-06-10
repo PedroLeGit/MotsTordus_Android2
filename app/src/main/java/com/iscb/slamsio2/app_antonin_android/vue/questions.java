@@ -1,11 +1,13 @@
 package com.iscb.slamsio2.app_antonin_android.vue;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.iscb.slamsio2.app_antonin_android.Classes_crud.crud_question;
 import com.iscb.slamsio2.app_antonin_android.R;
@@ -17,7 +19,6 @@ public class questions extends AppCompatActivity implements View.OnClickListener
 
         //Propriétés
         private crud_question crud_question;
-        private String solution;
         private TextView lbl_question_titre;
         private TextView lbl_question_question;
         private RadioButton rbtn_choix1;
@@ -26,6 +27,8 @@ public class questions extends AppCompatActivity implements View.OnClickListener
         private Button btn_validerquestion;
         private Button btn_question_indice;
         private class_participation laParticipation;
+        private String solution;
+        private String indice;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,22 @@ public class questions extends AppCompatActivity implements View.OnClickListener
 
         }
 
+        private void show_indice(){
+            //APpel de la methode dans le crud_question
+            crud_question acces_question = new crud_question();
+            String nb = String.valueOf(laParticipation.getConcours_participation());
+            acces_question.demande_indice(nb);
+            class_questions question = acces_question.getQuestion_en_cours();
+
+            //Affectation graphique
+            Context context = getApplicationContext();
+            CharSequence text = ;
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+
         /**
          * Permet de gerer les actions au clique bouton
          * @param v = l'objet bouton cliqué
@@ -86,7 +105,7 @@ public class questions extends AppCompatActivity implements View.OnClickListener
         public void onClick(View v) {
             Button b = (Button) v;
             if(b.getText().equals(btn_question_indice.getText())){
-
+                show_indice();
             }
             else if (b.getText().equals(btn_validerquestion.getText())){
 

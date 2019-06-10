@@ -12,9 +12,10 @@ public class class_questions implements Parcelable {
     private String choix3_question;
     private String solution_question;
     private String categorie_question;
+    private String indice_question;
 
     //  Construction
-    public class_questions(int unId, String unLibelle, String choix1, String choix2, String choix3,String bonne_rep, String categorie){
+    public class_questions(int unId, String unLibelle, String choix1, String choix2, String choix3,String bonne_rep, String categorie, String indice){
         id_question = unId;
         libelle_question = unLibelle;
         choix1_question = choix1;
@@ -22,7 +23,9 @@ public class class_questions implements Parcelable {
         choix3_question = choix3;
         solution_question = bonne_rep;
         categorie_question =  categorie;
+        indice_question = indice;
     }
+
     //  Accesseurs
     //      Getter
 
@@ -34,6 +37,7 @@ public class class_questions implements Parcelable {
         choix3_question = in.readString();
         solution_question = in.readString();
         categorie_question = in.readString();
+        indice_question = in.readString();
     }
 
     public static final Creator<class_questions> CREATOR = new Creator<class_questions>() {
@@ -75,6 +79,11 @@ public class class_questions implements Parcelable {
     public String getCategorie_question() {
         return categorie_question;
     }
+
+    public String getIndice_question() {
+        return indice_question;
+    }
+
     //      Setter
 
     public void setLibelle_question(String libelle_question) {
@@ -101,6 +110,10 @@ public class class_questions implements Parcelable {
         this.categorie_question = categorie_question;
     }
 
+    public void setIndice_question(String indice_question) {
+        this.indice_question = indice_question;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -115,5 +128,6 @@ public class class_questions implements Parcelable {
         dest.writeString(choix3_question);
         dest.writeString(solution_question);
         dest.writeString(categorie_question);
+        dest.writeString(indice_question);
     }
 }
