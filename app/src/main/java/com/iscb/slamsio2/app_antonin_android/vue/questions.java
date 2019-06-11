@@ -90,11 +90,22 @@ public class questions extends AppCompatActivity implements View.OnClickListener
 
             //Affectation graphique
             Context context = getApplicationContext();
-            CharSequence text = ;
+            CharSequence text = question.getIndice_question();
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+        }
+
+        private void submit_answer(){
+            //APpel de la methode dans le crud_question
+            crud_question acces_question = new crud_question();
+            String nb = String.valueOf(laParticipation.getConcours_participation());
+            acces_question.demande_indice(nb);
+            class_questions question = acces_question.getQuestion_en_cours();
+
+            //Ecoute du radio selectionne
+            if()
         }
 
         /**
@@ -108,6 +119,18 @@ public class questions extends AppCompatActivity implements View.OnClickListener
                 show_indice();
             }
             else if (b.getText().equals(btn_validerquestion.getText())){
+                RadioButton radioButton1 = (RadioButton) findViewById(R.id.rbtn_choix1);
+                RadioButton radioButton2 = (RadioButton) findViewById(R.id.rbtn_choix2);
+                RadioButton radioButton3 = (RadioButton) findViewById(R.id.rbtn_choix3);
+                radioButton1.setOnClickListener(choix1);
+                radioButton2.setOnClickListener(choix2);
+                radioButton3.setOnClickListener(choix3);
+                View.OnClickListener choix1 = new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                }
 
             }
         }
